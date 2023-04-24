@@ -3,7 +3,7 @@
 </script>
 
 {#each list as {title, body}}
-<div class="artist">
+<div class='artist'>
     <h2>{title}</h2>
     <p>{body}</p>
 </div>   

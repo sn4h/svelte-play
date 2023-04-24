@@ -1,11 +1,11 @@
 <script>
-    import {onMount} from "svelte"
-    import ArtistList from "../ArtistList.svelte";
-    import ArtistSearch from "../ArtistSearch.svelte";
+    import {onMount} from 'svelte'
+    import ArtistList from '../ArtistList.svelte';
+    import ArtistSearch from '../ArtistSearch.svelte';
 
-    const endpoint = "https://jsonplaceholder.typicode.com/posts";
+    const endpoint = 'https://jsonplaceholder.typicode.com/posts';
   
-    let searchTerm = "";
+    let searchTerm = '';
     let artistList = [];
     let displayList = [];
 
