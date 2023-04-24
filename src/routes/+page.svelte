@@ -25,10 +25,19 @@
      }
 </script>
 
-<ArtistSearch 
-    bind:searchTerm
-    on:updateSearch={() => {
-        displayList = onFilterList(artistList, searchTerm);
-    }}
-/>
-<ArtistList bind:list={displayList} />
+<main>
+    <ArtistSearch 
+        bind:searchTerm
+        on:updateSearch={() => {
+            displayList = onFilterList(artistList, searchTerm);
+        }}
+    />
+    <ArtistList bind:list={displayList} />
+</main>
+
+<style>
+    main {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+</style>

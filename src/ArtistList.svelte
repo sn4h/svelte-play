@@ -13,7 +13,8 @@
 
 <style>
 .artist {
-    margin-bottom: 0.5em;
-    border-bottom: 1px grey;
+    margin: 0.5rem 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px grey solid;
 }
 </style>
