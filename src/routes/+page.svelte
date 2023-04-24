@@ -5,14 +5,30 @@
 
     const endpoint = "https://jsonplaceholder.typicode.com/posts";
   
-    let searchTerm = "hllo world";
+    let searchTerm = "";
     let artistList = [];
+    let displayList = [];
 
     onMount(async()  => {
         const response = await fetch(endpoint);
         artistList = await response.json();
+        displayList = artistList;
      }) 
+
+     function onFilterList(list, term) {
+        return list.filter(item => {
+            return (
+                item.title.toLowerCase().match(term.toLowerCase()) ||
+                item.body.toLowerCase().match(term.toLowerCase()) 
+            );
+        });
+     }
 </script>
 
-<ArtistSearch {searchTerm} />
-<ArtistList {artistList} />
+<ArtistSearch 
+    bind:searchTerm
+    on:updateSearch={() => {
+        displayList = onFilterList(artistList, searchTerm);
+    }}
+/>
+<ArtistList bind:list={displayList} />

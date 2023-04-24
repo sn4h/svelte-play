@@ -1,8 +1,8 @@
 <script>
-    export let artistList;
+    export let list;
 </script>
 
-{#each artistList as {title, body}}
+{#each list as {title, body}}
 <div class="artist">
     <h2>{title}</h2>
     <p>{body}</p>

@@ -1,12 +1,16 @@
 <script>
-export let searchTerm;
+    import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
+    export let searchTerm;
 </script>
 
 <div class="SearchForm">
     <h4>
         Search:
         <small>
+            {#if searchTerm}
             for:
+            {/if}
             {searchTerm}
         </small>
     </h4>
@@ -15,6 +19,9 @@ export let searchTerm;
             type="text"
             aria-label="Search Input"
             bind:value={searchTerm}
+            on:keyup={() => {
+                dispatch('updateSearch');
+            }}
         /> 
     </div>
 </div>
