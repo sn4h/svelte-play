@@ -8,14 +8,10 @@
     let searchTerm = "hllo world";
     let artistList = [];
 
-    onMount(
-      async()  => {
-        
+    onMount(async()  => {
         const response = await fetch(endpoint);
         artistList = await response.json();
-        console.log(artistList);
-}
-    ) 
+     }) 
 </script>
 
 <ArtistSearch {searchTerm} />
