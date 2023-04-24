@@ -8,7 +8,7 @@
             name: "Hans",
             reknown: "testing"
         },{
-            name: "Philip",
+            name: "Ola",
             reknown: "testing"
         },{
             name: "Joachim",
